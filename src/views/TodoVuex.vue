@@ -36,9 +36,9 @@
 
 
 <button @click="openModal">Crear Todo</button>
-<modal v-if="isOpen" title="Hola mundo" @on:close="closeModal"> 
+<modal v-if="isOpen" @on:close="closeModal"> 
   <template v-slot:header>
-      <h2>Titulo del modal</h2>
+      <h2>Nueva tarea</h2>
   </template>
 
   <template v-slot:body>
@@ -49,6 +49,8 @@
         v-model="textTodo"
         ref="txtTextoTodo"
       >
+      <br><br>
+      <button type="submit">Crear</button>
     </form>
   </template>
 

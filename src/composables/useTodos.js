@@ -19,13 +19,9 @@ const useTodos = () => {
       textTodo,
       txtTextoTodo,
       
-
-
-
       pending: computed( () => store.getters['pendingTodos']),
       all: computed( () => store.getters['allTodos']),
       completed: computed( () => store.getters['completedTodos']),
-
       getTodosByTab:  computed( () => store.getters['getTodosByTab']( currentTab.value ) ),
       
       // Methods
@@ -33,10 +29,8 @@ const useTodos = () => {
       openModal: () => isOpen.value = true,
       closeModal: () => isOpen.value = false,
       onSubmit: () => {
-        // console.log('pokemon a buscar: ', textTodo.value);
         store.commit('createTodo', textTodo.value),
         isOpen.value = false
-        // router.push({ name: 'pokemon-id', params:{ id: pokemonId.value }})
       }
     }    
 } 
